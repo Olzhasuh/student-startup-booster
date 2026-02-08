@@ -15,6 +15,12 @@ contract SupportToken is ERC20, Ownable {
 
     function mint(address to, uint256 amount) external {
         require(minters[msg.sender], "Not minter");
+    function setMinter(address minter, bool allowed) external onlyOwner {
+        minters[minter] = allowed;
+    }
+
+    function mint(address to, uint256 amount) external {
+        require(minters[msg.sender], "Not a minter");
         _mint(to, amount);
     }
 }
