@@ -1,16 +1,119 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Student Startup Booster</title>
-  </head>
-  <body>
-    <h1>Student Startup Booster</h1>
+    <link rel="icon" type="image/png" href="favicon.png">
 
-    <button id="connectBtn">Connect MetaMask</button>
-    <div id="status"></div>
-    <div id="address"></div>
+
+    <!-- ethers v6 -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 480px;
+        margin: 60px auto;
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        background: #4f46e5;
+        color: white;
+        margin-top: 12px;
+      }
+
+      button:hover {
+        background: #4338ca;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+
+      label {
+        margin-top: 16px;
+        display: block;
+        font-weight: bold;
+      }
+
+      .status {
+        margin-top: 12px;
+        font-size: 14px;
+        color: #374151;
+      }
+
+      .address {
+        font-size: 13px;
+        word-break: break-all;
+        margin-top: 6px;
+        color: #6b7280;
+      }
+
+      .balance {
+        margin-top: 8px;
+        font-weight: bold;
+      }
+
+      .section {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🚀 Student Startup Booster</h1>
+
+      <button id="connectBtn">Connect MetaMask</button>
+
+      <div id="status" class="status"></div>
+      <div id="address" class="address"></div>
+      <div id="ethBalance" class="balance"></div>
+
+      <div class="section">
+        <h3>Create Campaign</h3>
+
+        <label>Title</label>
+        <input id="title" placeholder="My startup idea" />
+
+        <label>Goal (ETH)</label>
+        <input id="goalEth" type="number" placeholder="1" />
+
+        <label>Duration (seconds)</label>
+        <input id="duration" type="number" placeholder="600" />
+
+        <button id="createBtn">Create Campaign</button>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
