@@ -1,13 +1,13 @@
-# Sample Hardhat Project
+Student Startup Booster
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+This is a simple decentralized application (dApp) for supporting student startups using Ethereum.
 
-Try running some of the following tasks:
+The idea is very straightforward:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+students can create startup campaigns
+
+other users can support them by sending ETH
+
+supporters receive ERC-20 reward tokens for their contribution
+
+The project is built as a final university project and demonstrates basic blockchain concepts.
